@@ -1,0 +1,29 @@
+.navbar-custom {
+    background-color: #343a40;
+    padding: 15px;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff;
+}
+.navbar-custom .nav-link:hover {
+    color: #cccccc;
+}
+
+.navbar-toggler {
+    color: red;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        text-align: center;
+    }
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30"%3E%3Cpath stroke="%23ffffff" stroke-width="2" d="M5 8h20M5 15h20M5 22h20"/%3E%3C/svg%3E');
+}

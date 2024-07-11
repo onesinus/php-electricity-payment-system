@@ -1,0 +1,29 @@
+ .table-custom {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table-custom thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.table-custom th,
+.table-custom td {
+    padding: 12px 15px;
+}
+.table-custom tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.table-custom tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.table-custom tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.table-custom tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
