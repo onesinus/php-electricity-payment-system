@@ -3,9 +3,12 @@ require '../config.php';
 
 function getAllPembayaran() {
     global $conn;
-    $query = "SELECT p.id_pembayaran, p.id_tagihan, p.tanggal_pembayaran, p.biaya_admin, p.total_bayar, p.id_user
-              FROM pembayaran p";
-    $stmt = $conn->prepare($query);
-    $stmt->execute();
+    $stmt = $conn->query("
+        SELECT p.*, t.id_tagihan, u.id_user
+        FROM pembayaran p
+        LEFT JOIN tagihan t ON p.id_tagihan = t.id_tagihan
+        LEFT JOIN user u ON p.id_user = u.id_user
+    ");
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+?>

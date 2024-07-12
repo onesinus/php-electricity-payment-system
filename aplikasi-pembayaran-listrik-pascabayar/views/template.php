@@ -1,3 +1,13 @@
+<?php
+// views/template.php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +37,7 @@
                 <li class="nav-item"><a class="nav-link" href="<?= $baseUrl ?>/views/view_pelanggan.php">Pelanggan</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= $baseUrl ?>/views/view_penggunaan.php">Penggunaan</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= $baseUrl ?>/views/view_pembayaran.php">Pembayaran</a></li>
+                <a href="logout.php" class="btn btn-danger">Logout</a>
             </ul>
         </div>
     </nav>
